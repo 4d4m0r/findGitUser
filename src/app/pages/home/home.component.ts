@@ -14,6 +14,7 @@ import { githubService } from '../../_services/github.service';
 export class HomeComponent {
   user: UserGit | undefined;
   username: string = '';
+  showUserDetails: boolean = false;
 
   constructor(private githubService: githubService) {}
 
@@ -23,5 +24,7 @@ export class HomeComponent {
       .subscribe((response: UserGit) => {
         this.user = response;
       },(e) => console.log(e.message));
+
+    this.showUserDetails = true;
   }
 }

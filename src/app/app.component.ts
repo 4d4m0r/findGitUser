@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './_components/footer/footer.component';
@@ -8,7 +9,7 @@ import { UiContentComponent } from './_components/ui-content/ui-content.componen
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,NavbarComponent,FooterComponent,UiContentComponent],
+  imports: [RouterOutlet,HomeComponent,NavbarComponent,FooterComponent,UiContentComponent,FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

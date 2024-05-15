@@ -13,7 +13,7 @@
           Pesquisar
         </button>
       </div>
-      <div class="card text-center">
+      <div *ngIf="showUserDetails" class="card text-center">
         <img [src]="user?.avatar_url" alt="" class="card-image-top" />
         <div class="card-body">
           <h5 class="card-title">{{ user?.name }}</h5>
